@@ -5,12 +5,11 @@ class Solution(object):
         :type nums2: List[int]
         :rtype: List[int]
         """
+
         nums1.sort()
         result = set()
 
         for num in nums2:
-            if num in result:
-                continue
 
             low = 0
             high = len(nums1) - 1
@@ -26,4 +25,5 @@ class Solution(object):
                     high = mid - 1
 
         return list(result)
-        
+
+    
